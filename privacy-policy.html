@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FlowTheCall — Privacy Policy</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.6; }
+  h1 { font-size: 28px; border-bottom: 2px solid #6c63ff; padding-bottom: 8px; }
+  h2 { font-size: 18px; margin-top: 28px; color: #6c63ff; }
+  code { background: #f4f4f7; padding: 2px 5px; border-radius: 3px; font-size: 13px; }
+  .meta { color: #666; font-size: 13px; margin-bottom: 24px; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+
+<h1>FlowTheCall — Privacy Policy</h1>
+<p class="meta">Last updated: April 30, 2026</p>
+
+<p>FlowTheCall (the "Extension") is a Chrome browser extension that helps Business Development Representatives (BDRs) prepare for sales calls inside Salesfinity. This Privacy Policy explains what data the Extension collects, how it is used, and what is stored.</p>
+
+<h2>1. Information We Collect</h2>
+<p>The Extension processes the following data <strong>locally in your browser</strong>:</p>
+<ul>
+  <li><strong>Caller information</strong> displayed by Salesfinity (caller name, company, phone number, email when shown). This is read from the Salesfinity tab you have open.</li>
+  <li><strong>LinkedIn page content</strong> when you visit a LinkedIn profile or company page, used only to surface enrichment in the side panel.</li>
+  <li><strong>Microphone audio and tab audio</strong>, captured only while you explicitly start the optional "Live Coach" feature. Audio is sent to OpenAI Whisper for transcription and to Anthropic Claude for suggestions. Audio is not retained by the Extension.</li>
+  <li><strong>Your settings</strong> (API keys, preferred call language, world clock zones, callback list, calendar URL) which you enter into the Extension's settings panel.</li>
+</ul>
+
+<h2>2. Where Data Is Stored</h2>
+<ul>
+  <li>All settings, API keys, callbacks, and clock preferences are stored using <code>chrome.storage.local</code>, which keeps them on <strong>your own computer</strong>.</li>
+  <li>The Extension does <strong>not</strong> have its own backend server, database, or analytics service.</li>
+  <li>The Extension does <strong>not</strong> sell, share, or transmit your data to the Extension developer.</li>
+</ul>
+
+<h2>3. Third-Party Services</h2>
+<p>If you choose to enable the relevant features, your data is sent to these services using API keys you provide:</p>
+<ul>
+  <li><strong>Anthropic Claude API</strong> (<code>api.anthropic.com</code>) — used for news ranking, objection-handler responses, and Live Coach suggestions. Subject to <a href="https://www.anthropic.com/legal/privacy" target="_blank">Anthropic's Privacy Policy</a>.</li>
+  <li><strong>OpenAI Whisper API</strong> (<code>api.openai.com</code>) — used for live transcription of call audio when Live Coach is active. Subject to <a href="https://openai.com/policies/privacy-policy" target="_blank">OpenAI's Privacy Policy</a>.</li>
+  <li><strong>Google News RSS</strong> (<code>news.google.com</code>) — fetches public news articles related to the caller's company.</li>
+  <li><strong>Google Calendar</strong> (<code>calendar.google.com</code>) — opens a pre-filled calendar event when you schedule a callback or meeting. The Extension never reads or writes your calendar without your explicit click.</li>
+</ul>
+
+<h2>4. iCal Calendar Feed (Optional)</h2>
+<p>If you paste your Google Calendar private iCal URL into Settings, the Extension fetches your upcoming events read-only to display them in the Schedule tab. The URL is stored locally and is never transmitted elsewhere.</p>
+
+<h2>5. Permissions Explained</h2>
+<ul>
+  <li><strong>sidePanel</strong> — to render the FlowTheCall UI in Chrome's side panel.</li>
+  <li><strong>activeTab / tabs / scripting</strong> — to read caller info from the Salesfinity tab and LinkedIn pages while you are using them.</li>
+  <li><strong>storage</strong> — to save your settings locally.</li>
+  <li><strong>tabCapture</strong> — to capture call audio for the optional Live Coach feature, only when you click "Start".</li>
+</ul>
+
+<h2>6. What We Do NOT Do</h2>
+<ul>
+  <li>We do not collect, sell, or share user data with third parties for advertising.</li>
+  <li>We do not track your browsing history.</li>
+  <li>We do not access pages outside Salesfinity, LinkedIn, and the API endpoints listed above.</li>
+  <li>We do not record audio when Live Coach is paused or off.</li>
+</ul>
+
+<h2>7. Data Deletion</h2>
+<p>To delete all data stored by the Extension, open <code>chrome://extensions</code>, click "Remove" on FlowTheCall, and confirm. This wipes all locally stored settings.</p>
+
+<h2>8. Contact</h2>
+<p>For questions about this policy, contact: <strong>solomonkenneth1@gmail.com</strong></p>
+
+</body>
+</html>

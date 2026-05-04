@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FlowTheCall — Sales Call Assistant for Salesfinity BDRs</title>
+<meta name="description" content="FlowTheCall is a Chrome side-panel co-pilot for outbound BDRs working in Salesfinity. Caller info, AI prep, news, world clock and calendar in one place.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #222; line-height: 1.6; background: #fafafa; }
+  .hero { background: linear-gradient(180deg, #5ed3c8 0%, #6c63ff 100%); color: #fff; padding: 80px 24px 100px; text-align: center; }
+  .hero h1 { font-size: 56px; font-weight: 800; letter-spacing: -1px; margin-bottom: 16px; }
+  .hero p { font-size: 22px; opacity: 0.95; max-width: 640px; margin: 0 auto 32px; }
+  .badge { display: inline-block; background: rgba(255,255,255,0.15); padding: 6px 14px; border-radius: 20px; font-size: 13px; margin-bottom: 24px; backdrop-filter: blur(10px); }
+  .container { max-width: 960px; margin: -60px auto 0; padding: 0 24px 80px; position: relative; z-index: 2; }
+  .card { background: #fff; border-radius: 16px; padding: 48px; box-shadow: 0 20px 60px rgba(0,0,0,0.08); margin-bottom: 24px; }
+  h2 { font-size: 28px; color: #2a1e5a; margin-bottom: 16px; border-bottom: 2px solid #6c63ff; padding-bottom: 8px; display: inline-block; }
+  h3 { color: #6c63ff; font-size: 18px; margin-top: 24px; margin-bottom: 8px; }
+  ul { padding-left: 22px; margin-top: 8px; }
+  li { margin-bottom: 8px; }
+  .footer { text-align: center; padding: 32px 24px; color: #888; font-size: 13px; border-top: 1px solid #eee; }
+  a { color: #6c63ff; }
+  a:hover { text-decoration: underline; }
+  .links { margin-top: 24px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .links a { background: #6c63ff; color: #fff; padding: 12px 22px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+  .links a:hover { background: #5447e0; text-decoration: none; }
+  .links a.secondary { background: #f0eeff; color: #6c63ff; }
+  .links a.secondary:hover { background: #e2deff; }
+  code { background: #f4f4f7; padding: 2px 6px; border-radius: 3px; font-size: 13px; }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="badge">🎧 Chrome Extension for Salesfinity BDRs</div>
+  <h1>FlowTheCall</h1>
+  <p>Ride the call. Close the deal.<br>Sales-call co-pilot that auto-detects your live caller, ranks news, surfaces senior contacts, and books callbacks straight to Google Calendar.</p>
+</section>
+
+<main class="container">
+
+  <div class="card">
+    <h2>What it does</h2>
+    <ul>
+      <li><strong>Auto-detects the live caller</strong> the moment a Salesfinity call connects — name, company, country.</li>
+      <li><strong>Ranks senior people</strong> at the prospect's company so you reach the decision-maker.</li>
+      <li><strong>Filters Google News</strong> down to ONLY items relevant to your pitch (competitor mentions, security funding, breaches, CISO hires) with a one-line angle.</li>
+      <li><strong>Built-in objection handler</strong> with copy-ready responses pulled from your own scored calls.</li>
+      <li><strong>Schedule tab</strong> — multi-country World Clock, Google Calendar feed, "Call back later" and "Set meeting" buttons that pre-fill GCal with the prospect's email.</li>
+      <li><strong>Optional Live Coach</strong> with real-time transcript + AI suggestions during the call.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Privacy first</h2>
+    <p>Everything is stored locally on your machine using <code>chrome.storage.local</code>. There is no FlowTheCall backend. No analytics. No data leaves your computer unless YOU plug in your own API keys for Anthropic / OpenAI / Google Calendar features.</p>
+    <p style="margin-top:12px">Audio is captured only when you click "Start" on Live Coach. It stops the moment you click Pause.</p>
+    <div class="links">
+      <a href="privacy-policy.html">Read full Privacy Policy</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Support</h2>
+    <p>Found a bug? Have a feature request? Reach out:</p>
+    <h3>📧 Email</h3>
+    <p><a href="mailto:solomonkenneth1@gmail.com">solomonkenneth1@gmail.com</a></p>
+    <h3>🐛 Common issues</h3>
+    <ul>
+      <li><strong>The extension doesn't detect my caller</strong> — refresh the Salesfinity tab and click the Re-detect button.</li>
+      <li><strong>News tab shows nothing</strong> — that's correct: it only shows Ox-relevant news. Add your Anthropic API key in Settings (⚙️).</li>
+      <li><strong>Live Coach doesn't start</strong> — Live Coach requires your OpenAI and Anthropic API keys in Settings.</li>
+      <li><strong>Google Calendar callback opens with wrong time</strong> — check your timezone in Chrome and your Google Calendar settings.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Requirements</h2>
+    <ul>
+      <li>A Salesfinity account (the dialer where calls happen)</li>
+      <li>(Optional) Anthropic Claude API key for news ranking, objections, Live Coach</li>
+      <li>(Optional) OpenAI API key for Whisper-powered live transcription</li>
+      <li>(Optional) Google Calendar private iCal URL for the Schedule tab</li>
+    </ul>
+  </div>
+
+</main>
+
+<div class="footer">
+  Built by a working BDR for working BDRs · <a href="privacy-policy.html">Privacy Policy</a> · <a href="mailto:solomonkenneth1@gmail.com">Contact</a>
+</div>
+
+</body>
+</html>
